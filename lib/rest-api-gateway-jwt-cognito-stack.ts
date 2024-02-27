@@ -74,8 +74,8 @@ export class RestApiGatewayJwtCognitoStack extends cdk.Stack {
 
     // create a GET /hello endpoint which invoked the simple lambda function,
     // and uses the token authorizer created above
-    const summarizeEndpoint = restApi.root.addResource('hello');
-    summarizeEndpoint.addMethod(
+    const helloEndpoint = restApi.root.addResource('hello');
+    helloEndpoint.addMethod(
       "GET", 
       new apigw.LambdaIntegration(lambdaFn),
       { authorizer: tokenAuthorizer }
