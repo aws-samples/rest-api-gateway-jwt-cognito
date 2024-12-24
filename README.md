@@ -23,7 +23,7 @@ The typical workflow would be that a client application (or a user) would reques
 
 That token would then be supplied in the request header destined for the API Gateway endpoint. Since this sample uses the REST API, it first invokes the authorizer lambda function to check if the token presented is valid or not. If it is valid, the request is then forwarded to the AWS service integration of choice.
 
-API Gateway can integrate with many AWS Services. In this sample, it is connecting to a simple [lambda function](./lambda/lambda_function.py) which returns a simple "Hello" message.
+API Gateway can integrate with many AWS Services. In this sample, it is connecting to a simple [lambda function](./lambda/simple-function/lambda_function.py) which returns a simple "Hello" message.
 
 ## Seeing it in action
 
